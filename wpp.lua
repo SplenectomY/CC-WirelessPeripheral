@@ -404,7 +404,7 @@ function remotePeripheral.find(type, filterFunction)
     end
 
     local next = next
-    if next(foundToReturn) == nil then
+    if foundToReturn == nil or next(foundToReturn) == nil then
         return nil
     else
         return foundToReturn
